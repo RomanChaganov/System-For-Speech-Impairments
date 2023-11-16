@@ -1,0 +1,32 @@
+img {
+  width: 180px;
+  height: 180px;
+  border: black 1px solid;
+  float: left;
+  border-radius: 5px;
+}
+
+.photo {
+  padding-bottom: 110px;
+}
+
+.about_text {
+  margin-left: 200px;
+  padding-top: 0;
+}
+
+.messangers {
+  width: 24px;
+  height: 24px;
+}
+
+.about_text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.messangers{
+  border-radius: 30%;
+  margin-right: 5px;
+}

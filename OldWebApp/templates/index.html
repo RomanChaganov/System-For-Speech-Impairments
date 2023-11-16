@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Распознаватель речи с дисфонией</h1>
+            <nav>
+                <ul>
+                 <li><a href="/">Главная</a></li>
+                 <li><a href="/about">О нас</a></li>
+                 <li style="border-right: 0;"><a href="/project">О проекте</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="main">
+            <p>Приложение является "внешней оберткой" для нейронной сети, сделанной для
+            <a href="https://xn--e1aajagmjdbheh6azd.xn--p1ai/projects/2718">исследовательского проекта</a>.
+            Нужно сказать, что нейросеть обучена на голосе одного конкретного человека,
+            поэтому для вас она может генерировать бессмыслицу.
+            </p>
+            <p>Кроме распознавания голоса в текст, можно полученный текст озвучить мужским
+                или женским голосом. Это возможно благодаря open-source модели нейронной сети
+            <a href="https://github.com/snakers4/silero-models">Silero TTS</a>.</p>
+            <div id="functional">
+                <div id="recorder">
+                    <h3>Звукозапись/Плеер</h3>
+                    <canvas width="220" height="40" id="canvas"></canvas>
+                    <div id="buttons">
+                        <button id="record" class="buttons_style"><span></span></button>
+                        <button id="stop" class="buttons_style"><span></span></button>
+                        <button id="play" class="buttons_style"><span></span></button>
+                    </div>
+                </div>
+                <div id="formData">
+                    <h2>Отправка на сервер</h2>
+                    <div class="content">
+                        <p>Перед отправкой выберите источник (записанный голос или файл),
+                        а так же выберите тип синтезируемого голоса. <em>Синтезированный голос
+                                можно будет прослушать в плеере, при этом ваша запись будет стерта!</em></p>
+                        <form name="mainForm">
+                            <fieldset><legend>Основные параметры</legend>
+                            <p>Источник:
+                                <label>
+                                    <input type="radio" name="source" value="record" checked>Запись
+                                </label>
+                                <label>
+                                    <input type="radio" name="source" value="file">Файл
+                                </label>
+                            </p>
+                            <p>Тип синтезируемого голоса:
+                                <label>
+                                    <input type="radio" name="gender" value="man" checked>Мужской
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="woman">Женский
+                                </label>
+                            </p>
+                            <p>Выбранный файл: <input type="file" name="audio" accept="audio" id="fileInput"></p>
+                            </fieldset>
+                            <p><input type="button" value="Отправить" id="send" class="buttons_style"></p>
+                            <hr>
+                            <h3>Распознанный голос</h3>
+                            <p><textarea name="text" id="textarea" readonly>Здесь будет распознанный текст</textarea></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>&copy; 2023 Gang Bros</p>
+        </div>
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/recorder.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>О нас</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Gang Bros</h1>
+            <nav>
+                <ul>
+                 <li><a href="/">Главная</a></li>
+                 <li><a href="/about">О нас</a></li>
+                 <li style="border-right: 0;"><a href="/project">О проекте</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="main">
+            <section>
+                <p class="team_text">
+                    Наша команда занимается разработкой нейросети, которая
+                    трансформирует речь с дефектами в нормальную.
+                </p>
+            </section>
+            <section class="team_members">
+                <div class="photo">
+                    <img src="{{ url_for('static', filename='images/Sasha.jpg') }}" alt="Sasha">
+                    <div class="about_text">
+                        <h2>Тимлид</h2>
+                        <h3>Мельников Александр Валерьевич</h3>
+                        <ul>
+                            <li><a href="https://t.me/mpirtgod"><img src="{{ url_for('static', filename='images/icons/tg.png') }}" alt="tg" class="messangers"></a></li>
+                            <li><a href="https://vk.com/mpirtgod"><img src="{{ url_for('static', filename='images/icons/vk.jpg') }}" alt="vk" class="messangers"></a></li>
+                            <li><a href="mailto:sanek.melnikow@mail.ru"><img src="{{ url_for('static', filename='images/icons/mail.png') }}" alt="email" class="messangers"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="{{ url_for('static', filename='images/Roma.jpg') }}" alt="Roma">
+                    <div class="about_text">
+                        <h2>Ст. Программист</h2>
+                        <h3>Чаганов Роман Дмитриевич</h3>
+                        <ul>
+                            <li><a href="https://t.me/ChaganovRoman"><img src="{{ url_for('static', filename='images/icons/tg.png') }}" alt="tg" class="messangers"></a></li>
+                            <li><a href="https://vk.com/id455326673"><img src="{{ url_for('static', filename='images/icons/vk.jpg') }}" alt="vk" class="messangers"></a></li>
+                            <li><a href="mailto:romantchaganov@yandex.ru"><img src="{{ url_for('static', filename='images/icons/mail.png') }}" alt="email" class="messangers"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="{{ url_for('static', filename='images/Danila.jpg') }}" alt="Danila">
+                    <div class="about_text">
+                        <h2>Программист/Аналитик</h2>
+                        <h3>Дорох Данила Васильевич</h3>
+                        <ul>
+                            <li><a href="https://t.me/PhantomFeed"><img src="{{ url_for('static', filename='images/icons/tg.png') }}" alt="tg" class="messangers"></a></li>
+                            <li><a href="https://vk.com/dorokhdanila"><img src="{{ url_for('static', filename='images/icons/vk.jpg') }}" alt="vk" class="messangers"></a></li>
+                            <li><a href="mailto:doroh.danil@mail.ru"><img src="{{ url_for('static', filename='images/icons/mail.png') }}" alt="email" class="messangers"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="footer">
+            <p>&copy; 2023 Gang Bros</p>
+        </div>
+    </div>
+</body>
+</html>
